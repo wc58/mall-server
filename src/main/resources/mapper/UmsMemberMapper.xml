@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="top.chao58.mapper.UmsMemberMapper">
+
+    <resultMap id="BaseResultMap" type="top.chao58.pojo.UmsMember">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="memberLevelId" column="member_level_id" jdbcType="BIGINT"/>
+            <result property="username" column="username" jdbcType="VARCHAR"/>
+            <result property="password" column="password" jdbcType="VARCHAR"/>
+            <result property="nickname" column="nickname" jdbcType="VARCHAR"/>
+            <result property="phone" column="phone" jdbcType="VARCHAR"/>
+            <result property="status" column="status" jdbcType="INTEGER"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="icon" column="icon" jdbcType="VARCHAR"/>
+            <result property="gender" column="gender" jdbcType="INTEGER"/>
+            <result property="birthday" column="birthday" jdbcType="DATE"/>
+            <result property="city" column="city" jdbcType="VARCHAR"/>
+            <result property="job" column="job" jdbcType="VARCHAR"/>
+            <result property="personalizedSignature" column="personalized_signature" jdbcType="VARCHAR"/>
+            <result property="sourceType" column="source_type" jdbcType="INTEGER"/>
+            <result property="integration" column="integration" jdbcType="INTEGER"/>
+            <result property="growth" column="growth" jdbcType="INTEGER"/>
+            <result property="luckeyCount" column="luckey_count" jdbcType="INTEGER"/>
+            <result property="historyIntegration" column="history_integration" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,member_level_id,username,
+        password,nickname,phone,
+        status,create_time,icon,
+        gender,birthday,city,
+        job,personalized_signature,source_type,
+        integration,growth,luckey_count,
+        history_integration
+    </sql>
+</mapper>
